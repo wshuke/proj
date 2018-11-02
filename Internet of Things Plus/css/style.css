@@ -3,6 +3,10 @@ body {
     padding-bottom: 0px;
 }
 
+.pointer1{
+		  	cursor: pointer;
+		  }	
+
 .carousel {
     margin-top: 0;
     height: 365px;
