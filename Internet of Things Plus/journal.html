@@ -8,6 +8,15 @@
     <title>日志</title>
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="myjs.js"></script>
+    <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
 </head>
 
 <body>
@@ -62,7 +71,7 @@
                     设备种类</button>
                 <ul class="nav nav-pills nav-stacked ">
                     <li class="nav-divider"></li>
-                    <li class="pointer1" onClick="$('#area').text('天心区')"><a>变压器</a></li>
+                    <li class="pointer1" id="byq"><a>变压器</a></li>
                     <li><a>光伏逆变器</a></li>
                     <li><a>负载</a></li>
                     <li><a>电能质量</a></li>
@@ -87,7 +96,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="例：长沙市岳麓区变压器0001">
+                                <input type="text" id="datepicker" class="form-control" placeholder="例：长沙市岳麓区变压器0001">
                                 <span class="input-group-btn">
         <button class="btn btn-primary" type="button">Go!</button>
       </span>
@@ -98,9 +107,9 @@
                 <div class="container-fluid">
                     <div class="row" id="r1">
                     <ol class="breadcrumb">
-                        <li onClick="$('#area').text('天心区')">变压器</li>
-                        <li>长沙市</li>
-                        <li id="area" class="active">岳麓区</li>
+                        <li id="type">变压器</li>
+                        
+                        <li id="area" class="active">长沙市岳麓区</li>
                     </ol>
                 </div>
                 </div>
@@ -238,7 +247,7 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
