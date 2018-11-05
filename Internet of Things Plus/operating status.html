@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>运行状态</title>
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/myjs.js"></script>
 </head>
 
 <body>
@@ -44,12 +48,12 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-wrapper">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#">主页</a></li>
-                    <li><a href="#">运行状态</a></li>
-                    <li><a href="#">预警信息</a></li>
-                    <li><a href="#">日志</a></li>
-                    <li><a href="#">设备管理</a></li>
-                    <li><a href="#">用户管理</a></li>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="operating%20status.html">运行状态</a></li>
+                    <li><a href="warning%20information.html">预警信息</a></li>
+                    <li><a href="journal.html">日志</a></li>
+                    <li><a href="equipment%20management.html">设备管理</a></li>
+                    <li><a href="user%20management.html">用户管理</a></li>
                 </ul>
             </div>
         </div>
@@ -57,28 +61,29 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <button class="btn btn-primary btn-lg btn-block" type="button">
+                <button class="btn btn-primary btn-lg btn-block" type="button" id="sbzl">
                     设备种类</button>
                 <ul class="nav nav-pills nav-stacked ">
                     <li class="nav-divider"></li>
-                    <li><a href="#">变压器</a></li>
-                    <li><a href="#">光伏逆变器</a></li>
-                    <li><a href="#">负载</a></li>
-                    <li><a href="#">电能质量</a></li>
-                    <li><a href="#">开关设备</a></li>
+                    <li class="pointer1" id="byq" value="变压器"><a>变压器</a></li>
+                    <li class="pointer1" id="gfnbq"><a>光伏逆变器</a></li>
+                    <li class="pointer1" id="fz"><a>负载</a></li>
+                    <li class="pointer1" id="dnzl"><a>电能质量</a></li>
+                    <li class="pointer1" id="kgsb"><a>开关设备</a></li>
+
                 </ul>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary btn-lg btn-block" type="button">
+                <button class="btn btn-primary btn-lg btn-block" type="button" id="dq">
                     地区（长沙）</button>
                 <ul class="nav nav-pills nav-stacked ">
                     <li class="nav-divider"></li>
-                    <li><a href="#">岳麓区</a></li>
-                    <li><a href="#">天心区</a></li>
-                    <li><a href="#">雨花区</a></li>
-                    <li><a href="#">望城区</a></li>
-                    <li><a href="#">开福区</a></li>
-                    <li><a href="#">长沙县</a></li>
+                    <li><a class="pointer1" id="ylq">岳麓区</a></li>
+                    <li><a class="pointer1" id="txq">天心区</a></li>
+                    <li><a class="pointer1" id="yhq">雨花区</a></li>
+                    <li><a class="pointer1" id="wcq">望城区</a></li>
+                    <li><a class="pointer1" id="kfq">开福区</a></li>
+                    <li><a class="pointer1" id="csx">长沙县</a></li>
                 </ul>
             </div>
             <div class="col-md-8">
@@ -86,27 +91,26 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="例：长沙市岳麓区变压器0001">
+                                <input type="text" id="datepicker" class="form-control" placeholder="例：长沙市岳麓区变压器0001">
                                 <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">Go!</button>
-      </span>
+                                    <button class="btn btn-primary" type="button">Go!</button>
+                                </span>
                             </div><!-- /input-group -->
                         </div><!-- /.col-md-12 -->
                     </div><!-- /.row -->
                 </div>
                 <div class="container-fluid">
                     <div class="row" id="r1">
-                    <ol class="breadcrumb">
-                        <li><a href="#">变压器</a></li>
-                        <li><a href="#">长沙市</a></li>
-                        <li class="active">岳麓区</li>
-                    </ol>
+                        <ol class="breadcrumb">
+                            <li id="type"></li>
+                            <li id="area" class="active"></li>
+                        </ol>
+                    </div>
                 </div>
-                </div>
-                
+
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
-                    <div class="panel-heading">设备列表</div>
+                    <div class="panel-heading">日志</div>
                     <div class="table-responsive">
                         <table class="table table-hover table-striped">
                             <thead>
@@ -114,6 +118,7 @@
                                     <th>名称</th>
                                     <th>地点</th>
                                     <th>编号</th>
+                                    <th>状态</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -121,21 +126,25 @@
                                     <td>变压器</td>
                                     <td>岳麓区</td>
                                     <td>0001</td>
+                                    <td class="font-color-danger">待处理</td>
                                 </tr>
                                 <tr>
                                     <td>光伏逆变器</td>
                                     <td>开福区</td>
                                     <td>0002</td>
+                                    <td>已处理</td>
                                 </tr>
                                 <tr>
                                     <td>负载</td>
                                     <td>雨花区</td>
                                     <td>0003</td>
+                                    <td>已处理</td>
                                 </tr>
                                 <tr>
                                     <td>XX</td>
                                     <td>XXX</td>
                                     <td>XXXX</td>
+                                    <td>XXX</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -149,8 +158,8 @@
                                     <ul class="pagination">
                                         <li>
                                             <a href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                  </a>
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
                                         </li>
                                         <li><a href="#">1</a></li>
                                         <li><a href="#">2</a></li>
@@ -159,8 +168,8 @@
                                         <li><a href="#">5</a></li>
                                         <li>
                                             <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                  </a>
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </nav>

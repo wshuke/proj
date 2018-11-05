@@ -6,17 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>日志</title>
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <script src="myjs.js"></script>
-    <script>
-  $(function() {
-    $( "#datepicker" ).datepicker();
-  });
-  </script>
+    <script src="js/myjs.js"></script>
 </head>
 
 <body>
@@ -25,7 +20,7 @@
             <div class="col-md-10">
             </div>
             <div class="col-md-1">
-                
+
             </div>
             <div class="col-md-1">
                 <a>登陆</a>
@@ -37,8 +32,8 @@
             <img src="images/p3.png" border="0" width="260px" height="78px" style="outline: none; float: left;">
             <div class="page-header">
                 <h1>“物联网+”智能设备监测平台
-        <small>国家电能变换与控制工程技术研究中心</small>
-    </h1>
+                    <small>国家电能变换与控制工程技术研究中心</small>
+                </h1>
             </div>
         </div>
     </div>
@@ -54,12 +49,12 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-wrapper">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#">主页</a></li>
-                    <li><a href="#">运行状态</a></li>
-                    <li><a href="#">预警信息</a></li>
-                    <li><a href="#">日志</a></li>
-                    <li><a href="#">设备管理</a></li>
-                    <li><a href="#">用户管理</a></li>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="operating%20status.html">运行状态</a></li>
+                    <li><a href="warning%20information.html">预警信息</a></li>
+                    <li><a href="journal.html">日志</a></li>
+                    <li><a href="equipment%20management.html">设备管理</a></li>
+                    <li><a href="user%20management.html">用户管理</a></li>
                 </ul>
             </div>
         </div>
@@ -67,28 +62,29 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <button class="btn btn-primary btn-lg btn-block" type="button">
+                <button class="btn btn-primary btn-lg btn-block" type="button" id="sbzl">
                     设备种类</button>
                 <ul class="nav nav-pills nav-stacked ">
                     <li class="nav-divider"></li>
-                    <li class="pointer1" id="byq"><a>变压器</a></li>
-                    <li><a>光伏逆变器</a></li>
-                    <li><a>负载</a></li>
-                    <li><a>电能质量</a></li>
-                    <li><a>开关设备</a></li>
+                    <li class="pointer1" id="byq" value="变压器"><a>变压器</a></li>
+                    <li class="pointer1" id="gfnbq"><a>光伏逆变器</a></li>
+                    <li class="pointer1" id="fz"><a>负载</a></li>
+                    <li class="pointer1" id="dnzl"><a>电能质量</a></li>
+                    <li class="pointer1" id="kgsb"><a>开关设备</a></li>
+
                 </ul>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary btn-lg btn-block" type="button">
+                <button class="btn btn-primary btn-lg btn-block" type="button" id="dq">
                     地区（长沙）</button>
                 <ul class="nav nav-pills nav-stacked ">
                     <li class="nav-divider"></li>
-                    <li><a>岳麓区</a></li>
-                    <li><a>天心区</a></li>
-                    <li><a>雨花区</a></li>
-                    <li><a>望城区</a></li>
-                    <li><a>开福区</a></li>
-                    <li><a>长沙县</a></li>
+                    <li><a class="pointer1" id="ylq">岳麓区</a></li>
+                    <li><a class="pointer1" id="txq">天心区</a></li>
+                    <li><a class="pointer1" id="yhq">雨花区</a></li>
+                    <li><a class="pointer1" id="wcq">望城区</a></li>
+                    <li><a class="pointer1" id="kfq">开福区</a></li>
+                    <li><a class="pointer1" id="csx">长沙县</a></li>
                 </ul>
             </div>
             <div class="col-md-8">
@@ -98,22 +94,21 @@
                             <div class="input-group">
                                 <input type="text" id="datepicker" class="form-control" placeholder="例：长沙市岳麓区变压器0001">
                                 <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">Go!</button>
-      </span>
+                                    <button class="btn btn-primary" type="button">Go!</button>
+                                </span>
                             </div><!-- /input-group -->
                         </div><!-- /.col-md-12 -->
                     </div><!-- /.row -->
                 </div>
                 <div class="container-fluid">
                     <div class="row" id="r1">
-                    <ol class="breadcrumb">
-                        <li id="type">变压器</li>
-                        
-                        <li id="area" class="active">长沙市岳麓区</li>
-                    </ol>
+                        <ol class="breadcrumb">
+                            <li id="type">变压器</li>
+                            <li id="area" class="active">长沙市岳麓区</li>
+                        </ol>
+                    </div>
                 </div>
-                </div>
-                
+
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
                     <div class="panel-heading">日志</div>
@@ -164,8 +159,8 @@
                                     <ul class="pagination">
                                         <li>
                                             <a href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                  </a>
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
                                         </li>
                                         <li><a href="#">1</a></li>
                                         <li><a href="#">2</a></li>
@@ -174,8 +169,8 @@
                                         <li><a href="#">5</a></li>
                                         <li>
                                             <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                  </a>
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -237,18 +232,18 @@
                     <div id="" class="col-sm-9">
                         <strong class="">&copy; The GNOME Project</strong><br />
                         <small>
-                        Free to share and remix: <a href="">Creative Commons CC-BY</a>.
-                        Optimized for standards.
-                        Hosted by <a href="">Red Hat</a>.
-                        Powered by <a href="">WordPress</a>.
-                    </small>
+                            Free to share and remix: <a href="">Creative Commons CC-BY</a>.
+                            Optimized for standards.
+                            Hosted by <a href="">Red Hat</a>.
+                            Powered by <a href="">WordPress</a>.
+                        </small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
