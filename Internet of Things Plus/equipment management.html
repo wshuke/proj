@@ -15,29 +15,50 @@
 </head>
 
 <body>
-    <div class="container" id="d1">
+    <div class="container-fluid" id="d1">
         <div class="row">
-            <div class="col-md-10">
-            </div>
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-1">
-                <a>登陆</a>
+            <div class="col-md-1 dropdown" style="float: right;">
+                <span type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-weight: bolder;
+">用户
+                    <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="
+    padding-top: 0px;
+    padding-bottom: 0px;
+">
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">个人中心</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">账户设置</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">用户反馈</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">退出</a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <img src="images/p3.png" border="0" width="260px" height="78px" style="outline: none; float: left;">
             <div class="page-header">
-                <h1>“物联网+”智能设备监测平台
-        <small>国家电能变换与控制工程技术研究中心</small>
-    </h1>
+                <h1 style="font-size: 40px;">“物联网+”智能设备监测平台
+                    <small style="font-size: 60%;">国家电能变换与控制工程技术研究中心</small>
+                </h1>
             </div>
         </div>
     </div>
     <nav class="navbar navbar-default" id="n3">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-wrapper">
                     <span class="sr-only">切换导航</span>
@@ -47,12 +68,12 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navbar-wrapper">
-                <ul class="nav navbar-nav navbar-left">
+                <ul class="nav navbar-nav navbar-left font1">
                     <li><a href="index.html">主页</a></li>
                     <li><a href="operating%20status.html">运行状态</a></li>
                     <li><a href="warning%20information.html">预警信息</a></li>
                     <li><a href="journal.html">日志</a></li>
-                    <li><a href="equipment%20management.html">设备管理</a></li>
+                    <li class="active1"><a href="equipment%20management.html">设备管理</a></li>
                     <li><a href="user%20management.html">用户管理</a></li>
                 </ul>
             </div>
@@ -60,38 +81,48 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-lg btn-block" type="button" id="sbzl">
-                    设备种类</button>
-                <ul class="nav nav-pills nav-stacked ">
-                    <li class="nav-divider"></li>
-                    <li class="pointer1" id="byq" value="变压器"><a>变压器</a></li>
-                    <li class="pointer1" id="gfnbq"><a>光伏逆变器</a></li>
-                    <li class="pointer1" id="fz"><a>负载</a></li>
-                    <li class="pointer1" id="dnzl"><a>电能质量</a></li>
-                    <li class="pointer1" id="kgsb"><a>开关设备</a></li>
+            <div class="col-md-1" style="padding-left: 0px;padding-right: 2px;width: 140px;">
+                <button class="btn btn-primary btn-lg btn-block font2" type="button" id="sbzl">
+设备种类</button>
+<ul class="nav nav-pills nav-stacked list-group">
+<li class="nav-divider"></li>
+    <li class="pointer1 list-group-item" id="byq"><a>变压器</a></li>
 
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-lg btn-block" type="button" id="dq">
+    <li class="pointer1 list-group-item" id="gfnbq"><a>光伏逆变器</a></li>
+
+    <li class="pointer1 list-group-item" id="fz"><a>负载</a></li>
+
+    <li class="pointer1 list-group-item" id="dnzl"><a>电能质量</a></li>
+
+    <li class="pointer1 list-group-item" id="kgsb"><a>开关设备</a></li>
+
+</ul>
+</div>
+            <div class="col-md-1" style="padding-left: 2px;padding-right:0px;width: 140px;">
+                <button class="btn btn-primary btn-lg btn-block font2" type="button" id="dq">
                     地区（长沙）</button>
-                <ul class="nav nav-pills nav-stacked ">
-                    <li class="nav-divider"></li>
-                    <li><a class="pointer1" id="ylq">岳麓区</a></li>
-                    <li><a class="pointer1" id="txq">天心区</a></li>
-                    <li><a class="pointer1" id="yhq">雨花区</a></li>
-                    <li><a class="pointer1" id="wcq">望城区</a></li>
-                    <li><a class="pointer1" id="kfq">开福区</a></li>
-                    <li><a class="pointer1" id="csx">长沙县</a></li>
+                <ul class="nav nav-pills nav-stacked list-group ">
+                   <li class="nav-divider"></li>
+                    <li  class="pointer1  list-group-item" id="ylq"><a>岳麓区</a></li>
+                    <li  class="pointer1  list-group-item" id="txq"><a>天心区</a></li>
+                    <li  class="pointer1  list-group-item" id="yhq"><a>雨花区</a></li>
+                    <li  class="pointer1  list-group-item" id="wcq"><a>望城区</a></li>
+                    <li  class="pointer1  list-group-item" id="kfq"><a>开福区</a></li>
+                    <li  class="pointer1  list-group-item" id="csx"><a>长沙县</a></li>
                 </ul>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9" style="
+    padding-right: 0px;
+    margin-left: 10px;
+    padding-left: 0px;
+">
                 <div class="container-fluid" id="c1">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
-                                <input type="text" id="datepicker" class="form-control" placeholder="例：长沙市岳麓区变压器0001">
+                                <form action="demo-form.php">
+                                    <input class="form-control" type="datetime-local" name="bdaytime">
+                                </form>
                                 <span class="input-group-btn">
                                     <button class="btn btn-primary" type="button">Go!</button>
                                 </span>
@@ -100,51 +131,135 @@
                     </div><!-- /.row -->
                 </div>
                 <div class="container-fluid">
-                    <div class="row" id="r1">
-                        <ol class="breadcrumb">
+                    <div class="row font2" id="r1">
+                        <ol class="breadcrumb" style="
+    margin-bottom: 0px;
+">
                             <li id="type"></li>
                             <li id="area" class="active"></li>
                         </ol>
                     </div>
                 </div>
 
-                <div class="panel panel-default">
+                <div class="panel panel-default font2">
                     <!-- Default panel contents -->
-                    <div class="panel-heading">日志</div>
+                    
                     <div class="table-responsive">
                         <table class="table table-hover table-striped">
                             <thead>
                                 <tr>
-                                    <th>名称</th>
-                                    <th>地点</th>
+                                    <th>设备名称</th>
+                                    <th>地区</th>
                                     <th>编号</th>
-                                    <th>状态</th>
+                                    <th>运行状态</th>
+                                    <th>负责人</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+
                                     <td>变压器</td>
                                     <td>岳麓区</td>
                                     <td>0001</td>
+                                    
                                     <td class="font-color-danger">待处理</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
+
+
                                 </tr>
                                 <tr>
                                     <td>光伏逆变器</td>
                                     <td>开福区</td>
                                     <td>0002</td>
                                     <td>已处理</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>负载</td>
                                     <td>雨花区</td>
                                     <td>0003</td>
                                     <td>已处理</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>XX</td>
                                     <td>XXX</td>
                                     <td>XXXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>XX</td>
+                                    <td>XXX</td>
+                                    <td>XXXX</td>
+                                    <td>XXX</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>XX</td>
+                                    <td>XXX</td>
+                                    <td>XXXX</td>
+                                    <td>XXX</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>XX</td>
+                                    <td>XXX</td>
+                                    <td>XXXX</td>
+                                    <td>XXX</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>XX</td>
+                                    <td>XXX</td>
+                                    <td>XXXX</td>
+                                    <td>XXX</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>XX</td>
+                                    <td>XXX</td>
+                                    <td>XXXX</td>
+                                    <td>XXX</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>XX</td>
+                                    <td>XXX</td>
+                                    <td>XXXX</td>
+                                    <td>XXX</td>
+                                    <td>XXX</td>
+                                    <td>
+                                        <a href="equipment%20management-1.html">详情</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -152,7 +267,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-2">
+                        <div class="col-md-7 col-md-offset-3">
                             <div class="pagination pagination-centered">
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">
@@ -231,18 +346,18 @@
                     <div id="" class="col-sm-9">
                         <strong class="">&copy; The GNOME Project</strong><br />
                         <small>
-                        Free to share and remix: <a href="">Creative Commons CC-BY</a>.
-                        Optimized for standards.
-                        Hosted by <a href="">Red Hat</a>.
-                        Powered by <a href="">WordPress</a>.
-                    </small>
+                            Free to share and remix: <a href="">Creative Commons CC-BY</a>.
+                            Optimized for standards.
+                            Hosted by <a href="">Red Hat</a>.
+                            Powered by <a href="">WordPress</a>.
+                        </small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
