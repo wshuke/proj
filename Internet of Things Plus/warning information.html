@@ -17,13 +17,33 @@
 <body>
     <div class="container-fluid" id="d1">
         <div class="row">
-            <div class="col-md-2" style="float: right;">
-                
-                <a class="pointer1">注册</a>
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                
-                <a class="pointer1">登陆</a>
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <div class="col-md-1 dropdown" style="float: right;">
+                <span type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-weight: bolder;
+">用户
+                    <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="
+    padding-top: 0px;
+    padding-bottom: 0px;
+">
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">个人中心</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">账户设置</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">用户反馈</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a class="l1" role="menuitem" tabindex="-1" href="#">退出</a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
@@ -31,8 +51,8 @@
         <div class="row">
             <img src="images/p3.png" border="0" width="260px" height="78px" style="outline: none; float: left;">
             <div class="page-header">
-                <h1>“物联网+”智能设备监测平台
-                    <small>国家电能变换与控制工程技术研究中心</small>
+                <h1 style="font-size: 40px;">“物联网+”智能设备监测平台
+                    <small style="font-size: 60%;">国家电能变换与控制工程技术研究中心</small>
                 </h1>
             </div>
         </div>
@@ -48,10 +68,10 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navbar-wrapper">
-                <ul class="nav navbar-nav navbar-left">
+                <ul class="nav navbar-nav navbar-left font1">
                     <li><a href="index.html">主页</a></li>
                     <li><a href="operating%20status.html">运行状态</a></li>
-                    <li><a href="warning%20information.html">预警信息</a></li>
+                    <li class="active1"><a href="warning%20information.html">预警信息</a></li>
                     <li><a href="journal.html">日志</a></li>
                     <li><a href="equipment%20management.html">设备管理</a></li>
                     <li><a href="user%20management.html">用户管理</a></li>
@@ -61,77 +81,69 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-2" style="padding-left: 0px;padding-right:5px;">
-                <button class="btn btn-primary btn-lg btn-block" type="button" id="sbzl">
-                    设备种类</button>
-                <ul class="nav nav-pills nav-stacked ">
-                    <li class="nav-divider"></li>
-                    <li class="pointer1 sbmc" id="byq"><a>变压器</a></li>
-                    <li class="pointer1 sbmc" id="gfnbq"><a>光伏逆变器</a></li>
-                    <li class="pointer1 sbmc" id="fz"><a>负载</a></li>
-                    <li class="pointer1 sbmc" id="dnzl"><a>电能质量</a></li>
-                    <li class="pointer1 sbmc" id="kgsb"><a>开关设备</a></li>
-                </ul>
+            <div class="col-md-6" style="
+    padding-left: 0px;
+">
+                <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        
+           
+               <button data-toggle="collapse" data-parent="#accordion" 
+                href="#collapse1" class="btn btn-danger b3">
+            
+                长沙市岳麓区变压器0001号过压
+                <span class="glyphicon glyphicon-fire"></span>
+        </button>
+            
+        
+        <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+               <ul>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;12：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过压</li>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;16：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过压</li>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;22：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过压</li>
+               </ul>
             </div>
-            <div class="col-md-2" style="padding-left: 5px;padding-right:0px;">
-                <button class="btn btn-primary btn-lg btn-block" type="button" id="dq">
-                    地区（长沙）</button>
-                <ul class="nav nav-pills nav-stacked ">
-                    <li class="nav-divider"></li>
-                    <li><a class="pointer1" id="ylq">岳麓区</a></li>
-                    <li><a class="pointer1" id="txq">天心区</a></li>
-                    <li><a class="pointer1" id="yhq">雨花区</a></li>
-                    <li><a class="pointer1" id="wcq">望城区</a></li>
-                    <li><a class="pointer1" id="kfq">开福区</a></li>
-                    <li><a class="pointer1" id="csx">长沙县</a></li>
-                </ul>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <button data-toggle="collapse" data-parent="#accordion" 
+                href="#collapse2" class="btn btn-danger b3">
+            
+                长沙市岳麓区变压器0001号过流
+                <span class="glyphicon glyphicon-flash"></span>
+        </button>
+                
+                
+         
+        <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+            <ul>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;12：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过流</li>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;16：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过流</li>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;22：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过流</li>
+               </ul>
+        </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <button data-toggle="collapse" data-parent="#accordion" 
+                href="#collapse3" class="btn btn-danger b3">
+            长沙市岳麓区变压器0001号三相不平衡
+            <span class="glyphicon glyphicon-equalizer"></span>
+        </button>
+        <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">
+                <ul>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;12：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号三相不平衡</li>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;16：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号三相不平衡</li>
+                   <li>2018/11/08&nbsp;&nbsp;&nbsp;22：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号三相不平衡</li>
+               </ul>
             </div>
-            <div class="col-md-8">
-                <div class="container-fluid" id="c1">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="input-group">
-                                <form action="demo-form.php">
-                                    <input class="form-control" type="datetime-local" name="bdaytime">
-                                </form>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="button">Go!</button>
-                                </span>
-                            </div><!-- /input-group -->
-                        </div><!-- /.col-md-12 -->
-                    </div><!-- /.row -->
-                </div>
-                <div class="container-fluid">
-                    <div class="row" id="r1">
-                        <ol class="breadcrumb">
-                            <li id="type"></li>
-                            <li id="area" class="active"></li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="container-fluid" style="padding: 0;">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button class="btn btn-primary b1" style="width: 100%" type="button">
-                                过压<span class="badge">0</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button class="btn btn-danger b1" style="width: 100%" type="button">
-                                过流<span class="badge">5</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button class="btn btn-primary b1" style="width: 100%" type="button">
-                                漏电流<span class="badge">0</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+</div>
+               
             </div>
         </div>
     </div>
@@ -196,8 +208,8 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

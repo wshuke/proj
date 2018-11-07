@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>主页</title>
+    <title>设备管理</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -67,48 +67,88 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navbar-wrapper">
-                <ul class="nav navbar-nav navbar-left font1">
-                    <li class="active1"><a href="index.html">主页</a></li>
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="index.html">主页</a></li>
                     <li><a href="operating%20status.html">运行状态</a></li>
                     <li><a href="warning%20information.html">预警信息</a></li>
                     <li><a href="journal.html">日志</a></li>
-                    <li><a href="equipment%20management.html">设备管理</a></li>
+                    <li class="active1"><a href="equipment%20management.html">设备管理</a></li>
                     <li><a href="user%20management.html">用户管理</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="images/img2.jpg" alt="First slide">
-            </div>
-            <div class="item">
-                <img src="images/p1.png" alt="Second slide">
-            </div>
-            <div class="item">
-                <img src="images/p4.png" alt="Third slide">
-            </div>
-        </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">上一页</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">下一页</span>
-        </a>
-    </div>
     <div class="container">
         <div class="row">
+            <div class="col-md-2" style="padding-left: 0px;padding-right:5px;">
+                <button class="btn btn-primary btn-lg btn-block" type="button" id="sbzl">
+                    设备种类</button>
+                <ul class="nav nav-pills nav-stacked ">
+                    <li class="nav-divider"></li>
+                    <li class="pointer1 sbmc" id="byq"><a>变压器</a></li>
+                    <li class="pointer1 sbmc" id="gfnbq"><a>光伏逆变器</a></li>
+                    <li class="pointer1 sbmc" id="fz"><a>负载</a></li>
+                    <li class="pointer1 sbmc" id="dnzl"><a>电能质量</a></li>
+                    <li class="pointer1 sbmc" id="kgsb"><a>开关设备</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2" style="padding-left: 5px;padding-right:0px;">
+                <button class="btn btn-primary btn-lg btn-block" type="button" id="dq">
+                    地区（长沙）</button>
+                <ul class="nav nav-pills nav-stacked ">
+                    <li class="nav-divider"></li>
+                    <li><a class="pointer1" id="ylq">岳麓区</a></li>
+                    <li><a class="pointer1" id="txq">天心区</a></li>
+                    <li><a class="pointer1" id="yhq">雨花区</a></li>
+                    <li><a class="pointer1" id="wcq">望城区</a></li>
+                    <li><a class="pointer1" id="kfq">开福区</a></li>
+                    <li><a class="pointer1" id="csx">长沙县</a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <div class="container-fluid" id="c1">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <form action="demo-form.php">
+                                    <input class="form-control" type="datetime-local" name="bdaytime">
+                                </form>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button">Go!</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-md-12 -->
+                    </div><!-- /.row -->
+                </div>
+                <div class="container-fluid">
+                    <div class="row" id="r1">
+                        <ol class="breadcrumb">
+                            <li id="type"></li>
+                            <li id="area" class="active"></li>
+                        </ol>
+                    </div>
+                </div>
+
+              <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">设备铭牌</h3>
+    </div>
+    <div class="panel-body">
+        <h4>XXX变压器</h4>
+           <ul>
+            <li>额定电流：</li>
+            <li>额定电压</li>
+            <li>额定功率</li>
+            
+            <li>放置地点：</li>
+            <li>生产厂家：</li>
+            <li>负责人：</li>
+        </ul>
+    </div>
+</div>
+              
+                
+            </div>
         </div>
     </div>
     <div id="footer">
@@ -162,11 +202,11 @@
                     <div id="" class="col-sm-9">
                         <strong class="">&copy; The GNOME Project</strong><br />
                         <small>
-                            Free to share and remix: <a href="">Creative Commons CC-BY</a>.
-                            Optimized for standards.
-                            Hosted by <a href="">Red Hat</a>.
-                            Powered by <a href="">WordPress</a>.
-                        </small>
+                        Free to share and remix: <a href="">Creative Commons CC-BY</a>.
+                        Optimized for standards.
+                        Hosted by <a href="">Red Hat</a>.
+                        Powered by <a href="">WordPress</a>.
+                    </small>
                     </div>
                 </div>
             </div>
