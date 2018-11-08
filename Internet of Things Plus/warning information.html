@@ -10,8 +10,12 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <script src="js/myjs.js"></script>
+    <script src="js/raphael-2.1.4.min.js"></script>
+    <script src="js/justgage.js"></script>
+    <script src="js/my.js"></script>
+    <script src="js/yb.js"></script>
 </head>
 
 <body>
@@ -38,12 +42,10 @@
                     <li role="presentation">
                         <a class="l1" role="menuitem" tabindex="-1" href="#">用户反馈</a>
                     </li>
-
                     <li role="presentation">
                         <a class="l1" role="menuitem" tabindex="-1" href="#">退出</a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </div>
@@ -81,72 +83,93 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-6" style="
-    padding-left: 0px;
-">
-                <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-        
-           
-               <button data-toggle="collapse" data-parent="#accordion" 
-                href="#collapse1" class="btn btn-danger b3">
-            
-                长沙市岳麓区变压器0001号过压
-                <span class="glyphicon glyphicon-fire"></span>
-        </button>
-            
-        
-        <div id="collapse1" class="panel-collapse collapse in">
-            <div class="panel-body">
-               <ul>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;12：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过压</li>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;16：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过压</li>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;22：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过压</li>
-               </ul>
+            <div class="col-md-4" style="padding-left: 0px;padding-right: 0px;width: 36%;">
+                <div class="panel panel-danger">
+                    <nav id="n2" class="navbar navbar-default navbar-static" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
+                                    <span class="sr-only">切换导航</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+                                <ul id="n2" class="nav navbar-nav">
+                                    <li><a href="#ios">变压器</a></li>
+                                    <li><a href="#svn">光伏逆变器</a></li>
+                                    <li><a href="#svn">负载</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:238px;overflow:auto; position: relative;">
+                        <button data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn btn-danger b3">
+                            长沙市岳麓区变压器0001号过压
+                            <span class="glyphicon glyphicon-fire"></span>
+                        </button>
+                        <button data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn btn-danger b3">
+                            长沙市岳麓区变压器0001号过压
+                            <span class="glyphicon glyphicon-fire"></span>
+                        </button>
+                        <button data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn btn-danger b3">
+                            长沙市岳麓区变压器0001号过压
+                            <span class="glyphicon glyphicon-fire"></span>
+                        </button>
+                        <button data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn btn-danger b3">
+                            长沙市岳麓区变压器0001号过压
+                            <span class="glyphicon glyphicon-fire"></span>
+                        </button>
+                        <button data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="btn btn-danger b3">
+                            长沙市岳麓区变压器0001号过流
+                            <span class="glyphicon glyphicon-flash"></span>
+                        </button>
+                        <button data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="btn btn-danger b3">
+                            长沙市岳麓区变压器0001号三相不平衡
+                            <span class="glyphicon glyphicon-equalizer"></span>
+                        </button>
+                    </div>
+                    <!--scroll-->
+                </div>
+                <!--panel-primary-->
             </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <button data-toggle="collapse" data-parent="#accordion" 
-                href="#collapse2" class="btn btn-danger b3">
-            
-                长沙市岳麓区变压器0001号过流
-                <span class="glyphicon glyphicon-flash"></span>
-        </button>
-                
-                
-         
-        <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body">
-            <ul>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;12：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过流</li>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;16：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过流</li>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;22：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号过流</li>
-               </ul>
-        </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <button data-toggle="collapse" data-parent="#accordion" 
-                href="#collapse3" class="btn btn-danger b3">
-            长沙市岳麓区变压器0001号三相不平衡
-            <span class="glyphicon glyphicon-equalizer"></span>
-        </button>
-        <div id="collapse3" class="panel-collapse collapse">
-            <div class="panel-body">
-                <ul>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;12：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号三相不平衡</li>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;16：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号三相不平衡</li>
-                   <li>2018/11/08&nbsp;&nbsp;&nbsp;22：34&nbsp;&nbsp;&nbsp;长沙市岳麓区变压器0001号三相不平衡</li>
-               </ul>
-            </div>
-        </div>
-    </div>
-</div>
+            <!--col-md-4-->
+            <div class="col-md-8" style="padding-left: 0px;padding-right: 0px;width: 64%;">
+               <div class="col-md-4">
+                   <div class="container">
+                           <div id="yj1" style="width: 200px; height: 102px;"></div>
+                        <div class="y1">过流</div>
+                         <div id="yj2" style="width: 200px; height: 102px;"></div>
+                        <div class="y1">过压</div>
+                        
+                        </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="container">
+                           <div id="yj3" style="width: 200px; height: 102px;"></div>
+                        <div class="y1">漏电流</div>
+                         <div id="yj4" style="width: 200px; height: 102px;"></div>
+                        <div class="y1">温度</div>
+                        
+                        </div>
+               </div>
+               <div class="col-md-4">
+                   
+               </div>
                
+               
+                       
+               
+                        
+                     
+                    
             </div>
+            <!--col-md-8-->
         </div>
+        <!--row-->
     </div>
+    <!--container-->
     <div id="footer">
         <div class="container">
             <div class="row">
@@ -208,8 +231,7 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>

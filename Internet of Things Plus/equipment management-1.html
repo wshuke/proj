@@ -10,8 +10,12 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <script src="js/myjs.js"></script>
+    <script src="js/raphael-2.1.4.min.js"></script>
+    <script src="js/justgage.js"></script>
+    <script src="js/my.js"></script>
+    <script src="js/yb.js"></script>
 </head>
 
 <body>
@@ -21,6 +25,7 @@
                 <span type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="
     padding-bottom: 0px;
     padding-top: 0px;
+    font-weight: bolder;
 ">用户
                     <span class="caret"></span>
                 </span>
@@ -50,8 +55,8 @@
         <div class="row">
             <img src="images/p3.png" border="0" width="260px" height="78px" style="outline: none; float: left;">
             <div class="page-header">
-                <h1>“物联网+”智能设备监测平台
-                    <small>国家电能变换与控制工程技术研究中心</small>
+                <h1 style="font-size: 40px;">“物联网+”智能设备监测平台
+                    <small style="font-size: 60%;">国家电能变换与控制工程技术研究中心</small>
                 </h1>
             </div>
         </div>
@@ -67,7 +72,7 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navbar-wrapper">
-                <ul class="nav navbar-nav navbar-left">
+                <ul class="nav navbar-nav navbar-left font1">
                     <li><a href="index.html">主页</a></li>
                     <li><a href="operating%20status.html">运行状态</a></li>
                     <li><a href="warning%20information.html">预警信息</a></li>
@@ -80,32 +85,41 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-2" style="padding-left: 0px;padding-right:5px;">
-                <button class="btn btn-primary btn-lg btn-block" type="button" id="sbzl">
-                    设备种类</button>
-                <ul class="nav nav-pills nav-stacked ">
-                    <li class="nav-divider"></li>
-                    <li class="pointer1 sbmc" id="byq"><a>变压器</a></li>
-                    <li class="pointer1 sbmc" id="gfnbq"><a>光伏逆变器</a></li>
-                    <li class="pointer1 sbmc" id="fz"><a>负载</a></li>
-                    <li class="pointer1 sbmc" id="dnzl"><a>电能质量</a></li>
-                    <li class="pointer1 sbmc" id="kgsb"><a>开关设备</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2" style="padding-left: 5px;padding-right:0px;">
-                <button class="btn btn-primary btn-lg btn-block" type="button" id="dq">
+            <div class="col-md-1" style="padding-left: 0px;padding-right: 2px;width: 140px;">
+                <button class="btn btn-primary btn-lg btn-block font2" type="button" id="sbzl">
+设备种类</button>
+<ul class="nav nav-pills nav-stacked list-group">
+<li class="nav-divider"></li>
+    <li class="pointer1 list-group-item" id="byq"><a>变压器</a></li>
+
+    <li class="pointer1 list-group-item" id="gfnbq"><a>光伏逆变器</a></li>
+
+    <li class="pointer1 list-group-item" id="fz"><a>负载</a></li>
+
+    <li class="pointer1 list-group-item" id="dnzl"><a>电能质量</a></li>
+
+    <li class="pointer1 list-group-item" id="kgsb"><a>开关设备</a></li>
+
+</ul>
+</div>
+            <div class="col-md-1" style="padding-left: 2px;padding-right:0px;width: 140px;">
+                <button class="btn btn-primary btn-lg btn-block font2" type="button" id="dq">
                     地区（长沙）</button>
-                <ul class="nav nav-pills nav-stacked ">
-                    <li class="nav-divider"></li>
-                    <li><a class="pointer1" id="ylq">岳麓区</a></li>
-                    <li><a class="pointer1" id="txq">天心区</a></li>
-                    <li><a class="pointer1" id="yhq">雨花区</a></li>
-                    <li><a class="pointer1" id="wcq">望城区</a></li>
-                    <li><a class="pointer1" id="kfq">开福区</a></li>
-                    <li><a class="pointer1" id="csx">长沙县</a></li>
+                <ul class="nav nav-pills nav-stacked list-group ">
+                   <li class="nav-divider"></li>
+                    <li  class="pointer1  list-group-item" id="ylq"><a>岳麓区</a></li>
+                    <li  class="pointer1  list-group-item" id="txq"><a>天心区</a></li>
+                    <li  class="pointer1  list-group-item" id="yhq"><a>雨花区</a></li>
+                    <li  class="pointer1  list-group-item" id="wcq"><a>望城区</a></li>
+                    <li  class="pointer1  list-group-item" id="kfq"><a>开福区</a></li>
+                    <li  class="pointer1  list-group-item" id="csx"><a>长沙县</a></li>
                 </ul>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9" style="
+    padding-right: 0px;
+    margin-left: 10px;
+    padding-left: 0px;
+">
                 <div class="container-fluid" id="c1">
                     <div class="row">
                         <div class="col-md-12">
@@ -121,8 +135,10 @@
                     </div><!-- /.row -->
                 </div>
                 <div class="container-fluid">
-                    <div class="row" id="r1">
-                        <ol class="breadcrumb">
+                    <div class="row font2" id="r1">
+                        <ol class="breadcrumb" style="
+    margin-bottom: 0px;
+">
                             <li id="type"></li>
                             <li id="area" class="active"></li>
                         </ol>
@@ -212,8 +228,7 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+   
 </body>
 
 </html>
