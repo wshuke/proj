@@ -66,7 +66,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#ff9900'
+                    color: '#003399'
                 }
             }
         },
@@ -96,7 +96,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#339900'
+                    color: '#003399'
                 }
             }
         },
@@ -126,7 +126,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#990000'
+                    color: '#003399'
                 }
             }
         },
@@ -156,7 +156,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#ff9900'
+                    color: '#339900'
                 }
             }
         },
@@ -216,7 +216,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#990000'
+                    color: '#339900'
                 }
             }
         },
@@ -246,7 +246,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#ff9900'
+                    color: '#990000'
                 }
             }
         },
@@ -276,7 +276,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#339900'
+                    color: '#990000'
                 }
             }
         },
@@ -368,7 +368,7 @@
             point.update(newVal);
         }
         if (glB) {
-            point = glC.series[0].points[0];
+            point = glB.series[0].points[0];
             inc = Math.round((Math.random() - 0.5) * 100);
             newVal = point.y + inc;
             if (newVal < 0 || newVal > 400) {

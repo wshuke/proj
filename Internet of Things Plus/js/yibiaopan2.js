@@ -56,17 +56,17 @@
             enabled: false
         },
     });
-    // 过流
+    // 电流
     var guoliu = Highcharts.chart('guoliu', {
         yAxis: {
             min: 0,
             max: 400,
             title: { //标题
-                text: '过流',
+                text: '电流',
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#ff9900'
+                    color: '#990000'
                 }
             }
         },
@@ -74,7 +74,7 @@
             enabled: false
         },
         series: [{
-            name: '过流',
+            name: '电流',
             data: [380],
             dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
@@ -86,17 +86,17 @@
             }
         }]
     });
-    // 过压
+    // 电压
     var guoya = Highcharts.chart('guoya', {
         yAxis: {
             min: 0,
             max: 400,
             title: { //标题
-                text: '过压',
+                text: '电压',
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#339900'
+                    color: '#990000'
                 }
             }
         },
@@ -104,7 +104,7 @@
             enabled: false
         },
         series: [{
-            name: '过压',
+            name: '电压',
             data: [380],
             dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
@@ -126,7 +126,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#ff9900'
+                    color: '#003399'
                 }
             }
         },
@@ -156,7 +156,7 @@
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bolder',
-                    color: '#339900'
+                    color: '#003399'
                 }
             }
         },

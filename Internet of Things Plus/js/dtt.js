@@ -8,7 +8,7 @@ function activeLastPointToolip(chart) { //这个chart不能改
     var points = chart.series[0].points;
     chart.tooltip.refresh(points[points.length - 1]);
 }
-var chart = Highcharts.chart('wendu', { //.chart不能改
+var chart = Highcharts.chart('wendu', { 
     chart: {
         type: 'spline',
         marginRight: 10,
@@ -106,7 +106,7 @@ var chart = Highcharts.chart('gonglv', {
         style: {
             fontSize: '22px',
             fontWeight: 'bolder',
-            color: '#003399'
+            color: '#339900'
         }
     },
     xAxis: {
@@ -180,7 +180,7 @@ var chart = Highcharts.chart('dianya', {
         style: {
             fontSize: '22px',
             fontWeight: 'bolder',
-            color: '#ff9900'
+            color: '#003399'
         }
     },
     xAxis: {
