@@ -81,6 +81,9 @@ body {
 .font-color-danger {
 	color: #FF0000;
 }
+.font-color-end {
+    color: #808080;
+}
 
 #n3 {
 
@@ -140,13 +143,6 @@ body {
     font-weight: bolder;
 }
 
-
-#c1 {
-	margin-bottom: 10px;
-	padding-left: 0;
-	padding-right: 0;
-	width: 750px;
-}
 
 
 .pagination {

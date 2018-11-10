@@ -13,6 +13,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/my.js"></script>
+	
 </head>
 
 <body>
@@ -78,11 +79,13 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-1" style="padding-left: 0px;padding-right: 2px;width: 140px;">
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-6">
                 <button class="btn btn-primary btn-lg btn-block font2" type="button" id="sbzl">
-                    设备种类</button>
+                    设备类型</button>
                 <ul class="nav nav-pills nav-stacked list-group">
                     <li class="nav-divider"></li>
                     <li class="pointer1 list-group-item" id="byq"><a>变压器</a></li>
@@ -92,7 +95,7 @@
                     <li class="pointer1 list-group-item" id="kgsb"><a>开关设备</a></li>
                 </ul>
             </div>
-            <div class="col-md-1" style="padding-left: 2px;padding-right:0px;width: 140px;">
+            <div class="col-md-6">
                 <button class="btn btn-primary btn-lg btn-block font2" type="button" id="dq">
                     地区（长沙）</button>
                 <ul class="nav nav-pills nav-stacked list-group ">
@@ -102,15 +105,15 @@
                     <li class="pointer1  list-group-item" id="yhq"><a>雨花区</a></li>
                     <li class="pointer1  list-group-item" id="wcq"><a>望城区</a></li>
                     <li class="pointer1  list-group-item" id="kfq"><a>开福区</a></li>
+                    <li class="pointer1  list-group-item" id="kfq"><a>芙蓉区</a></li>
                     <li class="pointer1  list-group-item" id="csx"><a>长沙县</a></li>
                 </ul>
             </div>
-            <div class="col-md-9" style="
-    padding-right: 0px;
-    margin-left: 10px;
-    padding-left: 0px;
-">
-                <div class="container-fluid" id="c1">
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
@@ -125,10 +128,8 @@
                     </div><!-- /.row -->
                 </div>
                 <div class="container-fluid">
-                    <div class="row font2" id="r1">
-                        <ol class="breadcrumb" style="
-    margin-bottom: 0px;
-">
+                    <div class="row font2">
+                        <ol class="breadcrumb">
                             <li id="type"></li>
                             <li id="area" class="active"></li>
                         </ol>
@@ -140,12 +141,13 @@
                         <table class="table table-hover table-striped">
                             <thead>
                                 <tr>
-                                    <th>设备名称</th>
+                                    <th>设备类型</th>
                                     <th>地区</th>
                                     <th>编号</th>
-                                    <th>运行状态</th>
+                                    <th>预警状态</th>
                                     <th>维修人员</th>
-                                    <th>故障时间</th>
+                                    <th>处理人</th>
+                                    <th>告警时间</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -156,9 +158,10 @@
                                     <td>0001</td>
                                     <td class="font-color-danger">待处理</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -167,9 +170,10 @@
                                     <td>0002</td>
                                     <td>已处理</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -178,9 +182,10 @@
                                     <td>0003</td>
                                     <td>已处理</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -189,9 +194,10 @@
                                     <td>XXXX</td>
                                     <td>XXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -200,9 +206,10 @@
                                     <td>XXXX</td>
                                     <td>XXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -211,9 +218,10 @@
                                     <td>XXXX</td>
                                     <td>XXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -222,9 +230,10 @@
                                     <td>XXXX</td>
                                     <td>XXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -233,9 +242,10 @@
                                     <td>XXXX</td>
                                     <td>XXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -244,9 +254,10 @@
                                     <td>XXXX</td>
                                     <td>XXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -255,9 +266,10 @@
                                     <td>XXXX</td>
                                     <td>XXX</td>
                                     <td>XXX</td>
+                                    <td>XXX</td>
                                     <td>2018/11/7 23:21</td>
                                     <td>
-                                        <a href="equipment%20management-1.html">详情</a>
+                                        <a href="equipment%20management-1.html">设备信息</a>
                                     </td>
                                 </tr>
                             </tbody>
