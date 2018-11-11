@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>登录</title>
+    <link href="/css/login.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- -->
+    <script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>$(document).ready(function(c) {
+        $('.alert-close').on('click', function(c){
+            $('.message').fadeOut('slow', function(c){
+                $('.message').remove();
+            });
+            setTimeout(function () { window.location.replace("/index.html"); },500);//0.5s
+        });
+    });
+
+    </script>
+</head>
+<body>
+<!-- contact-form -->
+<div class="message warning">
+    <div class="inset">
+        <div class="login-head">
+            <h1 style="font-family: 黑体">请登录</h1>
+            <div class="alert-close"> </div>
+        </div>
+
+        <form action="/userLogin" method="post">
+            <div style="margin-left: 10px;height: 25px">
+                <p style="color:red;text-align:left;background-color: transparent" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"/>
+            </div>
+            <li>
+                <input type="text" class="text" value="输入帐号" name="count" autocomplete="off" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入帐号';}"><a class="icon user"></a>
+            </li>
+            <div class="clear"> </div>
+            <li>
+                <input type="password" value="Password" name="password" autocomplete="off" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a class="icon lock"></a>
+            </li>
+            <div class="clear"> </div>
+            <div class="submit">
+                <input type="submit" onclick="myFunction()" style="font-family: 黑体" value="登  录" ><input type="button" onclick="window.location.href='/registry.html'" style="font-family: 黑体" value="注  册" >
+                <h4><a href="#">忘记密码?</a></h4>
+                <div class="clear">  </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+</div>
+<div class="clear"> </div>
+<!--- footer --->
+<div class="footer">
+    <p>Copyright &copy; 2018.</p>
+</div>
+
+</body>
+</html>

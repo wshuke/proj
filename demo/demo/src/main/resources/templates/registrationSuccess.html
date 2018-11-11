@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+<head>
+    <meta charset="UTF-8">
+    <title>注册成功</title>
+    <style>
+        body{
+            background-image:url(/img/index/login.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #frame{
+            width: 650px;
+            height: 370px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            margin: 0px auto;
+            background-color: rgba(255,255,255,0.6);
+            text-align: center;
+        }
+        .press{
+            text-align: center;
+            color: whitesmoke;
+            background: cornflowerblue;
+            border-color: cornflowerblue;
+            border-style: solid;
+            border-radius: 10px;
+            width: 100px;
+            height: 40px;
+            margin: 20px;
+            font-size: 16px;
+            font-family: 黑体;
+        }
+        .press:hover{
+            background-color: white;
+            color: cornflowerblue;
+
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;color: transparent;font-family: 黑体"><h1>成功</h1></div>
+    <div id="frame">
+        <h1><p style=";margin-top: 50px" th:text="'恭喜 '+${name}+' 注册成功！'"/></h1>
+        <p style="color:darkgreen;font-size: 20px;font-family: 黑体;margin-top: 20px" th:text="'您的帐号为：'+ ${count}"></p>
+        <div>
+            <button class="press" type="button" onclick="window.location.href='/login.html'">返回登录</button>
+        </div>
+    </div>
+</body>
+</html>

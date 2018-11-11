@@ -1,7 +1,4 @@
-body {
-    padding-top: 40px;
-    padding-bottom: 0px;
-}
+
 
 .pointer1{
 		  	cursor: pointer;
@@ -85,11 +82,7 @@ body {
     color: #808080;
 }
 
-#n3 {
 
-    margin-bottom: 20px;
-
-}
 
 #n1 {
 
@@ -110,14 +103,7 @@ body {
 }
 
 
-#d1 {
-    background-color: #3968a1;
-    height: 24px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    color: #fff;
-}
+
 
 .dropdown-menu>li>a {
     color: #fff;
