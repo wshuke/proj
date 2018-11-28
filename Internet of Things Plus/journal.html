@@ -9,10 +9,14 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+
+    
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/my.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +26,7 @@
                 <span type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" style="padding-bottom: 0px;padding-top: 0px;font-weight: bolder;">用户
                     <span class="caret"></span>
                 </span>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="padding-top: 0px;padding-bottom: 0px;">
+                <ul class="dropdown-menu" id="dropdown-menu1" role="menu" aria-labelledby="dropdownMenu1" style="padding-top: 0px;padding-bottom: 0px;">
                     <li role="presentation">
                         <a class="l1" role="menuitem" tabindex="-1" href="#">个人中心</a>
                     </li>
@@ -44,245 +48,549 @@
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding-right: 0">
                 <img src="images/NEPCC.jpg" border="0" width="100%" height="100%" style="outline: none;float: left;margin-top: 7px;margin-bottom: 20px;">
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-left: 0">
-                <div class="page-header" style="padding-bottom: 0;">
-                <h1 style="font-size: 43px;">“物联网+”智能设备监测平台
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-left: 0">
+                    <div class="page-header" style="padding-bottom: 0;">
+                        <h1 style="font-size: 43px;">“物联网+”智能设备监测平台
                     <small style="font-size: 50%;">国家电能变换与控制工程技术研究中心</small>
                 </h1>
-            </div>
-            </div>
-            
-        </div>
-    </div>
-    <nav class="navbar navbar-default" style="margin-bottom: 20px;">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-wrapper">
-                    <span class="sr-only">切换导航</span>
-                    <span class="icon-bar top-bar"></span>
-                    <span class="icon-bar middle-bar"></span>
-                    <span class="icon-bar bottom-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-wrapper">
-                <ul class="nav navbar-nav navbar-left font1">
-                    <li><a href="index.html">主页</a></li>
-                    <li><a href="operating%20status.html">运行状态</a></li>
-                    <li><a href="warning%20information.html">预警信息</a></li>
-                    <li class="active1"><a href="journal.html">日志</a></li>
-                    <li><a href="equipment%20management.html">设备管理</a></li>
-                    <li><a href="user%20management.html">用户管理</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding-right: 2px;">
-                <button class="btn btn-primary btn-lg btn-block font2" type="button" id="sbzl">
-                    设备类型</button>
-                <ul class="nav nav-pills nav-stacked list-group">
-                    <li class="nav-divider"></li>
-                    <li class="pointer1 list-group-item" id="byq"><a>变压器</a></li>
-                    <li class="pointer1 list-group-item" id="gfnbq"><a>光伏逆变器</a></li>
-                    <li class="pointer1 list-group-item" id="fz"><a>负载</a></li>
-                    <li class="pointer1 list-group-item" id="dnzl"><a>电能质量</a></li>
-                    <li class="pointer1 list-group-item" id="kgsb"><a>开关设备</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding-left: 2px;">
-                <button class="btn btn-primary btn-lg btn-block font2" type="button" id="dq">
-                    地区（长沙）</button>
-                <ul class="nav nav-pills nav-stacked list-group ">
-                    <li class="nav-divider"></li>
-                    <li class="pointer1  list-group-item" id="ylq"><a>岳麓区</a></li>
-                    <li class="pointer1  list-group-item" id="txq"><a>天心区</a></li>
-                    <li class="pointer1  list-group-item" id="yhq"><a>雨花区</a></li>
-                    <li class="pointer1  list-group-item" id="wcq"><a>望城区</a></li>
-                    <li class="pointer1  list-group-item" id="kfq"><a>开福区</a></li>
-                    <li class="pointer1  list-group-item" id="csx"><a>芙蓉区</a></li>
-                    <li class="pointer1  list-group-item" id="csx"><a>长沙县</a></li>
-                </ul>
-            </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
-                
+        </div>
+        <nav class="navbar navbar-default" style="margin-bottom: 20px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-wrapper">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-wrapper">
+                    <ul class="nav navbar-nav navbar-left font1">
+                        <li><a href="index.html">主页</a></li>
+                        <li><a href="operating%20status.html">运行状态</a></li>
+                        <li><a href="warning%20information.html">预警信息</a></li>
+                        <li class="active1"><a href="journal.html">日志</a></li>
+                        <li><a href="equipment%20management.html">设备管理</a></li>
+                        <li><a href="user%20management.html">用户管理</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div class="row">
-                        <div class=" col-md-12">
-                            <div class="input-group">
-                                <form action="demo-form.php">
-                                    <input class="form-control" type="datetime-local" name="bdaytime">
-                                </form>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="button">Go!</button>
-                                </span>
-                            </div><!-- /input-group -->
-                        </div><!-- /.col-md-12 -->
-                    </div><!-- /.row -->
-              
-                
-                    <div class="row font2">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding-right: 2px;">
+                            <button class="btn btn-primary btn-lg btn-block font2" type="button" id="sbzl">
+                                设备类型</button>
+                            <ul class="nav nav-pills nav-stacked list-group">
+                                <li class="nav-divider"></li>
+                                <li class="pointer1 list-group-item" id="byq"><a>变压器</a></li>
+                                <li class="pointer1 list-group-item" id="gfnbq"><a>光伏逆变器</a></li>
+                                <li class="pointer1 list-group-item" id="fz"><a>负载</a></li>
+                                <li class="pointer1 list-group-item" id="dnzl"><a>电能质量</a></li>
+                                <li class="pointer1 list-group-item" id="kgsb"><a>开关设备</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding-left: 2px;">
+                            <button class="btn btn-primary btn-lg btn-block font2" type="button" id="dq">
+                                地区（长沙）</button>
+                            <ul class="nav nav-pills nav-stacked list-group ">
+                                <li class="nav-divider"></li>
+                                <li class="pointer1  list-group-item" id="ylq"><a>岳麓区</a></li>
+                                <li class="pointer1  list-group-item" id="txq"><a>天心区</a></li>
+                                <li class="pointer1  list-group-item" id="yhq"><a>雨花区</a></li>
+                                <li class="pointer1  list-group-item" id="wcq"><a>望城区</a></li>
+                                <li class="pointer1  list-group-item" id="kfq"><a>开福区</a></li>
+                                <li class="pointer1  list-group-item" id="csx"><a>芙蓉区</a></li>
+                                <li class="pointer1  list-group-item" id="csx"><a>长沙县</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="row">
+                    <div class="col-md-2 col-sm-2">
+                        <p style="font-weight: bolder;font-size: 18px;text-align: center;margin-bottom: 5px;margin-top: 5px;">按日期检索</p>
+                    </div>
+                    <div class="col-md-5 col-sm-5">
+                                <div class="row" id="dateFrom">
+                                    <div class="col-md-2 col-sm-1" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="年" data-size="10">
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-1" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="月" data-size="10">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-1" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="日" data-size="10">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                            <option>24</option>
+                                            <option>25</option>
+                                            <option>26</option>
+                                            <option>27</option>
+                                            <option>28</option>
+                                            <option>29</option>
+                                            <option>30</option>
+                                            <option>31</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-1" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="时" data-size="10">
+                                            <option>00</option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-1" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="分" data-size="10">
+                                            <option>00</option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                            <option>24</option>
+                                            <option>25</option>
+                                            <option>26</option>
+                                            <option>27</option>
+                                            <option>28</option>
+                                            <option>29</option>
+                                            <option>30</option>
+                                            <option>31</option>
+                                            <option>32</option>
+                                            <option>33</option>
+                                            <option>34</option>
+                                            <option>35</option>
+                                            <option>36</option>
+                                            <option>37</option>
+                                            <option>38</option>
+                                            <option>39</option>
+                                            <option>40</option>
+                                            <option>41</option>
+                                            <option>42</option>
+                                            <option>43</option>
+                                            <option>44</option>
+                                            <option>45</option>
+                                            <option>46</option>
+                                            <option>47</option>
+                                            <option>48</option>
+                                            <option>49</option>
+                                            <option>50</option>
+                                            <option>51</option>
+                                            <option>52</option>
+                                            <option>53</option>
+                                            <option>54</option>
+                                            <option>55</option>
+                                            <option>56</option>
+                                            <option>57</option>
+                                            <option>58</option>
+                                            <option>59</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-1 col-sm-1" style="padding-left: 0px;padding-right: 0px;">
+                                        <p style="font-weight: bolder;font-size: 18px;text-align: center;margin-bottom: 5px;margin-top: 5px;">至</p>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="col-md-5 col-sm-5">
+                                <div class="row" id="dateTo">
+                                    <div class="col-md-2 col-sm-2" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="年" data-size="10">
+                                            <option>2018年</option>
+                                            <option>2019年</option>
+                                            <option>2020年</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="月" data-size="10">
+                                            <option>01月</option>
+                                            <option>02月</option>
+                                            <option>03月</option>
+                                            <option>04月</option>
+                                            <option>05月</option>
+                                            <option>06月</option>
+                                            <option>07月</option>
+                                            <option>08月</option>
+                                            <option>09月</option>
+                                            <option>10月</option>
+                                            <option>11月</option>
+                                            <option>12月</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="日" data-size="10">
+                                            <option>01日</option>
+                                            <option>02日</option>
+                                            <option>03日</option>
+                                            <option>04日</option>
+                                            <option>05日</option>
+                                            <option>06日</option>
+                                            <option>07日</option>
+                                            <option>08日</option>
+                                            <option>09日</option>
+                                            <option>10日</option>
+                                            <option>11日</option>
+                                            <option>12日</option>
+                                            <option>13日</option>
+                                            <option>14日</option>
+                                            <option>15日</option>
+                                            <option>16日</option>
+                                            <option>17日</option>
+                                            <option>18日</option>
+                                            <option>19日</option>
+                                            <option>20日</option>
+                                            <option>21日</option>
+                                            <option>22日</option>
+                                            <option>23日</option>
+                                            <option>24日</option>
+                                            <option>25日</option>
+                                            <option>26日</option>
+                                            <option>27日</option>
+                                            <option>28日</option>
+                                            <option>29日</option>
+                                            <option>30日</option>
+                                            <option>31日</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="时" data-size="10">
+                                            <option>00时</option>
+                                            <option>01时</option>
+                                            <option>02时</option>
+                                            <option>03时</option>
+                                            <option>04时</option>
+                                            <option>05时</option>
+                                            <option>06时</option>
+                                            <option>07时</option>
+                                            <option>08时</option>
+                                            <option>09时</option>
+                                            <option>10时</option>
+                                            <option>11时</option>
+                                            <option>12时</option>
+                                            <option>13时</option>
+                                            <option>14时</option>
+                                            <option>15时</option>
+                                            <option>16时</option>
+                                            <option>17时</option>
+                                            <option>18时</option>
+                                            <option>19时</option>
+                                            <option>20时</option>
+                                            <option>21时</option>
+                                            <option>22时</option>
+                                            <option>23时</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2" style="padding-left: 0px;padding-right: 0px;">
+                                        <select class="selectpicker" data-width="100%" title="分" data-size="10">
+                                            <option>00分</option>
+                                            <option>01分</option>
+                                            <option>02分</option>
+                                            <option>03分</option>
+                                            <option>04分</option>
+                                            <option>05分</option>
+                                            <option>06分</option>
+                                            <option>07分</option>
+                                            <option>08分</option>
+                                            <option>09分</option>
+                                            <option>10分</option>
+                                            <option>11分</option>
+                                            <option>12分</option>
+                                            <option>13分</option>
+                                            <option>14分</option>
+                                            <option>15分</option>
+                                            <option>16分</option>
+                                            <option>17分</option>
+                                            <option>18分</option>
+                                            <option>19分</option>
+                                            <option>20分</option>
+                                            <option>21分</option>
+                                            <option>22分</option>
+                                            <option>23分</option>
+                                            <option>24分</option>
+                                            <option>25分</option>
+                                            <option>26分</option>
+                                            <option>27分</option>
+                                            <option>28分</option>
+                                            <option>29分</option>
+                                            <option>30分</option>
+                                            <option>31分</option>
+                                            <option>32分</option>
+                                            <option>33分</option>
+                                            <option>34分</option>
+                                            <option>35分</option>
+                                            <option>36分</option>
+                                            <option>37分</option>
+                                            <option>38分</option>
+                                            <option>39分</option>
+                                            <option>40分</option>
+                                            <option>41分</option>
+                                            <option>42分</option>
+                                            <option>43分</option>
+                                            <option>44分</option>
+                                            <option>45分</option>
+                                            <option>46分</option>
+                                            <option>47分</option>
+                                            <option>48分</option>
+                                            <option>49分</option>
+                                            <option>50分</option>
+                                            <option>51分</option>
+                                            <option>52分</option>
+                                            <option>53分</option>
+                                            <option>54分</option>
+                                            <option>55分</option>
+                                            <option>56分</option>
+                                            <option>57分</option>
+                                            <option>58分</option>
+                                            <option>59分</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2" style="padding-left: 0px;">
+                                        <button class="btn btn-primary" type="button" id="dateChooser">Go!</button>
+                                    </div>
+                                </div>
+                            </div>
+                </div><!-- /.row -->
+
+                    <div class="row font2" style="margin-top: 15px;">
                         <div class="col-md-12">
                             <ol class="breadcrumb" style="margin-bottom: 0px;">
-                            <li id="type"></li>
-                            <li id="area" class="active"></li>
-                        </ol>
+                                <li id="type"></li>
+                                <li id="area" class="active"></li>
+                            </ol>
                         </div>
-                        
                     </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default font2">
-                    <!-- Default panel contents -->
-                    <div class="table-responsive">
-                        <table class="table table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>设备类型</th>
-                                    <th>地区</th>
-                                    <th>编号</th>
-                                    <th>预警状态</th>
-                                    <th>维修人员</th>
-                                    <th>处理人</th>
-                                    <th>告警时间</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>变压器</td>
-                                    <td>岳麓区</td>
-                                    <td>0001</td>
-                                    <td class="font-color-danger">告警</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="operating%20status-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>光伏逆变器</td>
-                                    <td>开福区</td>
-                                    <td>0002</td>
-                                    <td>正常</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>负载</td>
-                                    <td>雨花区</td>
-                                    <td>0003</td>
-                                    <td class="font-color-end">停运</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>XX</td>
-                                    <td>XXX</td>
-                                    <td>XXXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>XX</td>
-                                    <td>XXX</td>
-                                    <td>XXXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>XX</td>
-                                    <td>XXX</td>
-                                    <td>XXXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>XX</td>
-                                    <td>XXX</td>
-                                    <td>XXXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>XX</td>
-                                    <td>XXX</td>
-                                    <td>XXXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>XX</td>
-                                    <td>XXX</td>
-                                    <td>XXXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>XX</td>
-                                    <td>XXX</td>
-                                    <td>XXXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>XXX</td>
-                                    <td>
-                                        <a href="equipment%20management-1.html">实时信息</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                
-                
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
+                        <div class="col-md-12">
+                            <div class="panel panel-default font2">
+                                <!-- Default panel contents -->
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>设备类型</th>
+                                                <th>地区</th>
+                                                <th>编号</th>
+                                                <th>预警状态</th>
+                                                <th>维修人员</th>
+                                                <th>处理人</th>
+                                                <th>告警时间</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>变压器</td>
+                                                <td>岳麓区</td>
+                                                <td>0001</td>
+                                                <td class="font-color-danger">告警</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="operating%20status-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>光伏逆变器</td>
+                                                <td>开福区</td>
+                                                <td>0002</td>
+                                                <td>正常</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>负载</td>
+                                                <td>雨花区</td>
+                                                <td>0003</td>
+                                                <td class="font-color-end">停运</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XX</td>
+                                                <td>XXX</td>
+                                                <td>XXXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XX</td>
+                                                <td>XXX</td>
+                                                <td>XXXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XX</td>
+                                                <td>XXX</td>
+                                                <td>XXXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XX</td>
+                                                <td>XXX</td>
+                                                <td>XXXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XX</td>
+                                                <td>XXX</td>
+                                                <td>XXXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XX</td>
+                                                <td>XXX</td>
+                                                <td>XXXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XX</td>
+                                                <td>XXX</td>
+                                                <td>XXXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>XXX</td>
+                                                <td>
+                                                    <a href="equipment%20management-1.html">实时信息</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p style="text-align: right;font-size: medium;font-weight: bolder;margin-top: 30px;">共有<span style="color: #589ecd;">X</span>条数据，共<span style="color: #589ecd;">X</span>页</p>
+                        </div>
+                        <div class="col-md-6">
                             <div class="pagination pagination-centered">
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">
@@ -306,70 +614,68 @@
                             </div>
                         </div>
                     </div>
-                
+                </div>
             </div>
         </div>
-    </div>
-    <div id="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="links col-xs-12 col-sm-9">
-                                    <div class="">
-                                        <ul id="" class="">
-                                            <li id="" class=""><a href="/">The GNOME Project</a>
-                                                <ul class="">
-                                                    <li id="" class=""><a href="">About Us</a></li>
-                                                    <li id="" class=""><a href="">Get Involved</a></li>
-                                                    <li id="" class=""><a href="">Support GNOME</a></li>
-                                                    <li id="" class=""><a href="">Merchandise</a></li>
-                                                    <li id="" class=""><a href="">Contact Us</a></li>
-                                                    <li id="" class=""><a href="">The GNOME Foundation</a></li>
-                                                    <li id="" class=""><a href="">Privacy</a></li>
-                                                </ul>
-                                            </li>
-                                            <li id="" class=""><a href="#">Resources</a>
-                                                <ul class="">
-                                                    <li id="" class=""><a href="">Developer Center</a></li>
-                                                    <li id="" class=""><a href="">Documentation</a></li>
-                                                    <li id="" class=""><a href="">Wiki</a></li>
-                                                    <li id="" class=""><a href="">Mailing Lists</a></li>
-                                                    <li id="" class=""><a href="">IRC Channels</a></li>
-                                                    <li id="" class=""><a href="">Bug Tracker</a></li>
-                                                    <li id="" class=""><a href="">Development Code</a></li>
-                                                </ul>
-                                            </li>
-                                            <li id="" class=""><a href="/">News</a>
-                                                <ul class="-">
-                                                    <li id="" class=""><a href="">Press Releases</a></li>
-                                                    <li id="" class=""><a href="">Latest Release</a></li>
-                                                    <li id="" class=""><a href="">Planet GNOME</a></li>
-                                                </ul>
-                                            </li>
+        <div id="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="links col-xs-12 col-sm-9">
+                            <div class="">
+                                <ul id="" class="">
+                                    <li id="" class=""><a href="/">The GNOME Project</a>
+                                        <ul class="">
+                                            <li id="" class=""><a href="">About Us</a></li>
+                                            <li id="" class=""><a href="">Get Involved</a></li>
+                                            <li id="" class=""><a href="">Support GNOME</a></li>
+                                            <li id="" class=""><a href="">Merchandise</a></li>
+                                            <li id="" class=""><a href="">Contact Us</a></li>
+                                            <li id="" class=""><a href="">The GNOME Foundation</a></li>
+                                            <li id="" class=""><a href="">Privacy</a></li>
                                         </ul>
-                                    </div>
-                                </div>
-                                
+                                    </li>
+                                    <li id="" class=""><a href="#">Resources</a>
+                                        <ul class="">
+                                            <li id="" class=""><a href="">Developer Center</a></li>
+                                            <li id="" class=""><a href="">Documentation</a></li>
+                                            <li id="" class=""><a href="">Wiki</a></li>
+                                            <li id="" class=""><a href="">Mailing Lists</a></li>
+                                            <li id="" class=""><a href="">IRC Channels</a></li>
+                                            <li id="" class=""><a href="">Bug Tracker</a></li>
+                                            <li id="" class=""><a href="">Development Code</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="" class=""><a href="/">News</a>
+                                        <ul class="-">
+                                            <li id="" class=""><a href="">Press Releases</a></li>
+                                            <li id="" class=""><a href="">Latest Release</a></li>
+                                            <li id="" class=""><a href="">Planet GNOME</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid">
-                        <!-- footnotes -->
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div id="" class="col-sm-9">
-                                    <strong class="">&copy; The GNOME Project</strong><br />
-                                    <small>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <!-- footnotes -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="" class="col-sm-9">
+                            <strong class="">&copy; The GNOME Project</strong><br />
+                            <small>
                             Free to share and remix: <a href="">Creative Commons CC-BY</a>.
                             Optimized for standards.
                             Hosted by <a href="">Red Hat</a>.
                             Powered by <a href="">WordPress</a>.
                         </small>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 </body>
 
 </html>

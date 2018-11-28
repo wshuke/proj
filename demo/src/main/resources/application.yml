@@ -1,9 +1,0 @@
-server:
-  port: 8080
-#loggin
-logging:
-  level:
-    root: info
-  file:
-    max-size: 20MB
-  path: ./
